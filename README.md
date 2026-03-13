@@ -1,52 +1,62 @@
-# Fixed Income Sensitivity Model
+# Global Markets Projects
 
-## Objective
-Build an Excel-based model to price a 5-year coupon bond and evaluate its sensitivity to changes in yields.
+## Overview
+This repository contains a small portfolio of market-focused projects developed to strengthen my understanding of fixed income, FX hedging, and macro-financial analysis in preparation for Global Markets internship applications.
 
-## Project Overview
-This project prices a plain-vanilla coupon bond using discounted cash flows and then measures interest rate sensitivity through:
+The projects combine Excel-based modelling, market interpretation, and concise written communication, with a focus on practical applications relevant to rates, FX, and monetary policy.
+
+## Projects
+
+### 1. [Fixed Income Sensitivity Model](./fixed-income-sensitivity-model/)
+An Excel-based bond valuation model used to price a coupon bond and measure interest rate sensitivity through:
 - Macaulay Duration
 - Modified Duration
 - Convexity
-- Approximate repricing under yield shocks
 - Exact repricing under yield shocks
 - Price-yield visualization
 
-## Files
-- `fixed_income_sensitivity_model.xlsx` — main Excel model
-- `fixed_income_summary.pdf` — one-page project summary
-- `images/price_yield_chart.png` — chart image for the repository page
+**Key takeaway:** bond prices move inversely to yields, and duration plus convexity help approximate that sensitivity.
 
-## Key Inputs
-- Face value: 1000
-- Annual coupon rate: 8.0%
-- Maturity: 5 years
-- Payments per year: 2
-- Yield to maturity: 10.0%
+### 2. [FX Forward Hedging Model](./fx-forward-hedging-model/)
+An Excel-based FX model that prices a theoretical USD/MXN forward using covered interest parity and compares:
+- unhedged FX exposure
+- hedged exposure with a forward contract
+- scenario-based MXN cost outcomes
 
-## Methodology
-1. Estimate coupon payments and total cash flows by period.
-2. Discount all cash flows using the yield per period.
-3. Sum present values to obtain the bond price.
-4. Compute Macaulay Duration as the weighted average time of discounted cash flows.
-5. Convert Macaulay Duration into Modified Duration to approximate percentage price sensitivity.
-6. Compute Convexity to improve the approximation for non-linear price-yield effects.
-7. Compare approximate repricing against exact repricing for +50 bps, +100 bps, and -50 bps shocks.
-8. Plot the price-yield relationship to visualize the inverse and convex relation between price and yield.
+**Key takeaway:** a forward hedge transforms an uncertain FX cash outflow into a fixed one.
 
-## Main Results
-### Base valuation
-- Bond price: 922.78
-- Macaulay Duration: 4.1798
-- Modified Duration: 3.9808
-- Convexity: 19.5736
+### 3. [Banxico Market Note](./banxico-market-note/)
+A one-page market note assessing the implications of Banxico’s policy stance for:
+- MXN rates
+- inflation expectations
+- USD/MXN
+- carry dynamics
+- near-term market risks
 
-### Scenario analysis
-| Scenario | New Yield | Approx Price | Exact Price | Approx Error | Duration-Only Price |
-|---|---:|---:|---:|---:|---:|
-| +50 bps | 10.5% | 904.642 | 904.639 | 0.002 | 904.416 |
-| +100 bps | 11.0% | 886.952 | 886.936 | 0.016 | 886.049 |
-| -50 bps | 9.5% | 941.375 | 941.377 | -0.002 | 941.150 |
+**Key takeaway:** monetary policy affects both the short end of the curve and FX through expectations, inflation credibility, and rate differentials.
 
-## Key Insight
-Bond prices move inversely to yields. Duration provides a first-order approximation of price sensitivity, while convexity improves the estimate because the price-yield relationship is curved rather than linear.
+## Repository Structure
+```text
+global-markets-projects/
+├── fixed-income-sensitivity-model/
+├── fx-forward-hedging-model/
+└── banxico-market-note/
+```
+
+## Skills Demonstrated
+- Fixed income valuation
+- Duration and convexity analysis
+- FX forward pricing
+- Hedging logic and scenario analysis
+- Monetary policy interpretation
+- Market writing and communication
+- Excel-based financial modelling
+
+## Tools Used
+- Microsoft Excel
+- PDF project summaries
+- GitHub for project organization and documentation
+
+## Author
+**Manuel Razo Alcántara**  
+Actuarial Science student at UNAM with interests in quantitative finance, fixed income, FX, derivatives, and Global Markets.
